@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl">
+	
+<section class="left-section">
+	<div class="container">
+		<div class="left-section-data">
+			<h2>Hello!</h2>
+			<h3>I am Shubh</h3>
+			<h4>
+			  <small><a href="" class="typewrite" data-period="2000" data-type='[ "I am a Student.", "I Love to Design.", "I Love to Develop." ]'>
+			    <span class="wrap"></span>
+			  </a></small>
+			</h4>
+		</div>
+		<div class="social-links">
+			<a href="" title="Follow Shubh on Facebook"><i class="fab fa-facebook-f"></i></a>
+			<a href="" title="Follow Shubh on Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="" title="Follow Shubh on Linkedin"><i class="fab fa-linkedin"></i></a>
+			<a href="" title="Follow Shubh on Google Plus"><i class="fab fa-google"></i></a>
+			<a href="" title="Follow Shubh on Github"><i class="fab fa-github"></i></a>
+			<a href="" title="Follow Shubh on Codepen"><i class="fab fa-codepen"></i></a>
+		</div>	
+	</div>
+	
+
+	<p class="pic-credit"><a href='https://www.freepik.com/free-photo/desk-with-a-laptop-a-cup-of-coffee-and-a-calendar_878794.htm'>Image by Freepik</a></p>
+</section>
+
+<section class="right-section">
+	<div class="right-section-data">
+		<div class="about">
+			<div class="center"><img src="img/IMG_20161128_140955.jpg" class="circle responsive-img"></div>
+			<p>
+				<span class="title-text">About</span><br>
+				I am a student of <b>B.Tech(Computer Science)</b>, currently in 4th year of my course.I've been working hard from the last 1 year to develop my web developement skills. I love to design and develop the web.<br>
+				You can usually find me in my bed sleeping, coding, watching youtube and having tea.<br>
+				If you are interested to be a coding buddy or develope projects, get in touch at <a href="#">shubhof7@gmail.com</a> Coffee or Tea will be on you!  
+			</p>
+		</div>
+		<div class="experience">
+			<p class="title-text">Experience</p>
+			<p class="job-box" ng-repeat="job in jobs">
+				<span class="company-name"><a href="{{job.link}}">{{job.company}}</a></span><br>
+				<span class="work-date">{{job.date}}</span><br>
+				<span class="job">{{job.job}}</span><br>
+			</p>
+		</div>
+		<div class="skillset">
+		   <p class="title-text">Skillset</p>
+		   <div class="row">
+		      <div class="col s6" ng-repeat="skill in skills">
+		      	<p class="skill">{{ skill.skillname }}</p>
+		      	<div class="progress">
+			      <div class="determinate" style="width: {{skill.percent}}%"></div>
+			  	</div>
+		      </div>
+		    </div>
+		    <p><blockquote>Other skills: <span ng-repeat="oSkills in otherSkills">{{oSkills}}<b>, </b></span>etc</blockquote></p>
+		</div>
+		<div class="education">
+			<p class="title-text">Education</p>
+			<p class="edu-box" ng-repeat="school in schools">
+				<span class="work-date">{{school.dateOfGraduation}}</span><br>
+				<span class="company-name">{{school.course}}</span><br>
+				<span class="job">{{school.schoolName}}</span><br>
+				<span>{{school.location}}</span>
+			</p>
+		</div>
+		<div class="projects">
+			<p class="title-text">Projects</p>
+			 <div class="row">
+			 	<div class="col s6" ng-repeat="project in projects">
+			 		<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+					    	<img class="activator" src="{{project.thumbnail}}">
+					    </div>
+					    <div class="card-content">
+					      <span class="card-title activator grey-text text-darken-4">{{project.projectName}}<i class="material-icons right">more_vert</i></span>
+					      <p><a href="{{project.link}}">View Project</a></p>
+					    </div>
+					    <div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4">{{project.projectName}}<i class="material-icons right">close</i></span>
+					      <p>{{project.projectType}}</p>
+					      <p>Technologies used : {{project.technologies}}</p>
+					    </div>
+					</div>
+			 	</div>
+			 </div> 
+		</div>
+	</div>
+</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
+<script src="script.js"></script>
+<script src="mainCtrl.js"></script>
+</body>
+</html>

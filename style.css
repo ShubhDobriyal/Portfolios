@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body{
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-family: monospace, sans-serif;
+}
+
+section{
+	width: 50%;
+}
+
+.left-section{
+	height: 100%;
+	font-family: 'Raleway';
+	background: url(img/O7MF5N0.jpg);
+	background-size: cover;
+	position: fixed; 
+	scroll-behavior: a;
+	color: white;
+	overflow: hidden; 
+}
+
+.right-section{
+	margin-left: 50%;
+}
+
+.right-section a{
+	color: teal;
+	font-family: sans-serif;
+}
+
+* { 
+	text-decoration: none;
+	
+}
+
+.left-section h4 a{
+	color: #f8f9fa;
+
+}
+
+.left-section .pic-credit a{
+	position: fixed;
+	bottom: 0;
+	right: 50%;
+	color: #2b303b;
+}
+
+.left-section-data{
+	padding-top: 80px;
+	height: 100%;
+}
+
+.left-section-data h3{
+	margin-top: 0px;
+}
+
+.left-section-data h2{
+	margin-bottom: 3px;
+}
+
+.social-links{
+	margin-top: 50px;
+	font-size: 35px;
+}
+
+.social-links a{
+	color: white;
+	margin-right:5px;
+}
+
+.social-links a .fa-facebook-f:hover{
+	color: #23629f;
+}
+
+.social-links a .fa-twitter:hover{
+	color: #4ec2e2;
+}
+
+.social-links a .fa-linkedin:hover{ color: #32739c; }
+
+.social-links a .fa-google:hover{ color: #f6931e; }
+
+.social-links a .fa-github:hover{ color: #363636; }
+
+.social-links a .fa-codepen:hover{ color: #535353; }
+.right-section-data{ padding: 10px; }
+.about{ padding: 15px; }
+.fa-user{
+	font-size: 60px;
+	color: #cfe6f0;
+}
+.about img{
+	height: 30%;
+	width: 30%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about p{
+	padding: 25px;
+	font-size: 18px;
+	font-weight: 0;
+	line-height: 1.7em;
+}
+.title-text{
+	font-weight: bold;
+	font-size: 20px;
+	color: #f6931e;
+}
+
+/* Experience Section */
+.experience, .skillset, .education, .projects{
+	padding: 25px;
+}
+
+.experience{
+	background: #e9e1e1;	
+}
+
+.job-box{
+	padding: 10px;
+
+}
+.company-name{
+	font-size: 22px;
+	font-weight: bold;
+}
+.company-name a{
+	color: #192f42;
+}
+.work-date{
+	font-size: 15px;
+	color: #777777;
+}
+.job{
+	font-size: 18px;
+	line-height: 1.7em;
+}
+
+.education{
+	background: #e9e1e1;
+}
+.edu-box{
+	margin-bottom: 30px;
+}
+.progress{
+	height: 15px;
+	background-color:;
+}
+
+/* Projects */
+.card .card-image img{
+	height: 150px;
+}
