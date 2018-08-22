@@ -54,3 +54,9 @@ var TxtType = function(el, toRotate, period) {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
+
+    const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav,{});
+
+    const ss = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(ss,{});    
