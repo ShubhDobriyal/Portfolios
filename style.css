@@ -228,7 +228,7 @@ a.sidenav-trigger i{
     content: "\f023";
 }
 
-@media(max-width: 768px){
+@media(min-width: 768px){
 	.left-section{
 		position: relative; 
 	}
