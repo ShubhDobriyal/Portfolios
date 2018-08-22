@@ -2,15 +2,42 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Shubham Dobriyal</title>
+	<link rel="icon" href="img/IMG_20161128_140955.jpg">
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="mainCtrl">
+<body ng-app="myApp" ng-controller="mainCtrl" id="home" class="scrollspy">
 	
-<section class="left-section">
+<section class="left-section" id="left-section">
+
+		 <a href="#" data-target="mobile-nav" class="sidenav-trigger right lock">
+		 		<i class="material-icons icon-unlock">clear_all</i>
+    			<i class="material-icons icon-lock">menu</i>
+		 </a>
+
+        	<ul class="sidenav" id="mobile-nav">
+        		<li><a class="sidenav-close" href="#!"><i class="material-icons closebtn">close</i></a></li>
+	            <li>
+	               <a href="#about">About</a>
+	            </li>
+	            <li>
+	                <a href="#experience">Experience</a>
+	            </li>
+	            <li>
+	                <a href="#skillset">Skills</a>
+	            </li>
+	            <li>
+	                <a href="#education">Education</a>
+	            </li>
+	            <li>
+	                <a href="#projects">Projects</a>
+	            </li>
+	        </ul>
+
 	<div class="container">
 		<div class="left-section-data">
 			<h2>Hello!</h2>
@@ -22,12 +49,12 @@
 			</h4>
 		</div>
 		<div class="social-links">
-			<a href="" title="Follow Shubh on Facebook"><i class="fab fa-facebook-f"></i></a>
-			<a href="" title="Follow Shubh on Twitter"><i class="fab fa-twitter"></i></a>
-			<a href="" title="Follow Shubh on Linkedin"><i class="fab fa-linkedin"></i></a>
-			<a href="" title="Follow Shubh on Google Plus"><i class="fab fa-google"></i></a>
-			<a href="" title="Follow Shubh on Github"><i class="fab fa-github"></i></a>
-			<a href="" title="Follow Shubh on Codepen"><i class="fab fa-codepen"></i></a>
+			<a href="https://www.facebook.com/shubhd123" title="Follow Shubh on Facebook"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://twitter.com/ShubhDobriyal7" title="Follow Shubh on Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.linkedin.com/in/shubham-dobriyal-shubh-rocks/" title="Follow Shubh on Linkedin"><i class="fab fa-linkedin"></i></a>
+			<a href="https://plus.google.com/100564415766153331008" title="Follow Shubh on Google Plus"><i class="fab fa-google"></i></a>
+			<a href="https://github.com/shubhof7" title="Follow Shubh on Github"><i class="fab fa-github"></i></a>
+			<a href="https://codepen.io/shubh1510/" title="Follow Shubh on Codepen"><i class="fab fa-codepen"></i></a>
 		</div>	
 	</div>
 	
@@ -37,7 +64,7 @@
 
 <section class="right-section">
 	<div class="right-section-data">
-		<div class="about">
+		<div class="about" id="about">
 			<div class="center"><img src="img/IMG_20161128_140955.jpg" class="circle responsive-img"></div>
 			<p>
 				<span class="title-text">About</span><br>
@@ -46,7 +73,7 @@
 				If you are interested to be a coding buddy or develope projects, get in touch at <a href="#">shubhof7@gmail.com</a> Coffee or Tea will be on you!  
 			</p>
 		</div>
-		<div class="experience">
+		<div class="experience" id="experience">
 			<p class="title-text">Experience</p>
 			<p class="job-box" ng-repeat="job in jobs">
 				<span class="company-name"><a href="{{job.link}}">{{job.company}}</a></span><br>
@@ -54,9 +81,9 @@
 				<span class="job">{{job.job}}</span><br>
 			</p>
 		</div>
-		<div class="skillset">
+		<div class="skillset" id="skillset">
 		   <p class="title-text">Skillset</p>
-		   <div class="row">
+		   <div class="row no-gutter">
 		      <div class="col s6" ng-repeat="skill in skills">
 		      	<p class="skill">{{ skill.skillname }}</p>
 		      	<div class="progress">
@@ -66,7 +93,7 @@
 		    </div>
 		    <p><blockquote>Other skills: <span ng-repeat="oSkills in otherSkills">{{oSkills}}<b>, </b></span>etc</blockquote></p>
 		</div>
-		<div class="education">
+		<div class="education" id="education">
 			<p class="title-text">Education</p>
 			<p class="edu-box" ng-repeat="school in schools">
 				<span class="work-date">{{school.dateOfGraduation}}</span><br>
@@ -75,10 +102,10 @@
 				<span>{{school.location}}</span>
 			</p>
 		</div>
-		<div class="projects">
+		<div class="projects" id="projects">
 			<p class="title-text">Projects</p>
-			 <div class="row">
-			 	<div class="col s6" ng-repeat="project in projects">
+			 <div class="tr row">
+			 	<div class="tc col s6" ng-repeat="project in projects">
 			 		<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
 					    	<img class="activator" src="{{project.thumbnail}}">
@@ -90,7 +117,7 @@
 					    <div class="card-reveal">
 					      <span class="card-title grey-text text-darken-4">{{project.projectName}}<i class="material-icons right">close</i></span>
 					      <p>{{project.projectType}}</p>
-					      <p>Technologies used : {{project.technologies}}</p>
+					      <p id="tech-used">Technologies used : {{project.technologies}}</p>
 					    </div>
 					</div>
 			 	</div>
@@ -101,8 +128,32 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="script.js"></script>
 <script src="mainCtrl.js"></script>
+<script>
+
+	    jQuery(document).ready(function($) {
+		  var alterClass = function() {
+		    var ww = document.body.clientWidth;
+		    if (ww < 480) {
+		      $('.tr').removeClass('row');
+		      $('.tc').removeClass('col');
+		      $('.tc').removeClass('s6');
+		    } else if (ww >= 481) {
+		      $('.tr').addClass('row');
+		      $('.tc').addClass('col');
+		      $('.tc').addClass('s6');
+		    };
+		  };
+		  $(window).resize(function(){
+		    alterClass();
+		  });
+		  //Fire it when the page first loads:
+		  alterClass();
+		});
+
+</script>
 </body>
 </html>
